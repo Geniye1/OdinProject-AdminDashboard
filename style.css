@@ -30,16 +30,41 @@ body {
 }
 
 .sidebar-inner-container {
-    grid-template-rows: 1fr repeat(5, 0.5fr) 1fr repeat(3, 0.5fr);
-    font-size: 0.9rem;
+    grid-auto-rows: 0.5fr;
+    font-size: 0.7rem;
+}
+
+.sidebar-item h1 {
+    color: white;
 }
 
 .sidebar-inner-container div:first-child {
     font-size: 1.1rem;
 }
 
-.sidebar-inner-container div:first-child, .sidebar div:nth-child(7) {
+.sidebar-inner-container div:first-child svg {
+    max-width: 2.5rem;  
+}
+
+.sidebar-inner-container div:first-child, .sidebar-inner-container div:nth-child(7) {
     margin-bottom: 3rem;
+    margin-top: 0.3rem;
+}
+
+.sidebar-item {
+    grid-template-columns: 0.7fr 4fr;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.sidebar-item svg {
+    max-width: 1.5rem;
+    fill: white;    
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.05); 
+    border-radius: 5px;
 }
 
 /* MAIN CONTENT */
