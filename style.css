@@ -1,6 +1,13 @@
 :root {
-    --col-primary: blue;
-    --col-bkg: rgb(189, 189, 189);
+    --col-primary: rgb(255, 105, 105);
+    --col-bkg: rgb(255, 245, 224);
+    --col-accent: rgb(199, 0, 57);
+
+    --ff-primary: 'Kanti', sans-serif;
+}
+
+body {
+    font-family: var(--ff-primary);
 }
 
 /* MAIN OUTER CONTAINER */
@@ -17,8 +24,43 @@
 }
 
 /* SIDEBAR */
-.sidebar {
+.sidebar-outer-container {
     grid-row: span 2;
+    padding: 1.5rem;
+}
+
+.sidebar-inner-container {
+    grid-template-rows: 1fr repeat(5, 0.5fr) 1fr repeat(3, 0.5fr);
+    font-size: 0.9rem;
+}
+
+.sidebar-inner-container div:first-child {
+    font-size: 1.1rem;
+}
+
+.sidebar-inner-container div:first-child, .sidebar div:nth-child(7) {
+    margin-bottom: 3rem;
+}
+
+/* MAIN CONTENT */
+.content {
+    grid-template-columns: 4fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.heading-container {
+    grid-template-rows: 0.4fr 8fr;
+}
+
+.projects-outer-container {
+    grid-row: span 2;
+    
+}
+
+.projects-inner-container {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 2rem;
 }
 
 /* UTILITY CLASSES */
